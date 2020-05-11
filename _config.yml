@@ -23,7 +23,7 @@ tagline: "A Hamburg based cloud native developer technology blog by aheumaier"
 email: andreas.heumaier@microsoft.com
 author: "Andreas Heumaier"
 description: >- # this means to ignore newlines until "baseurl:"
-  This is a Hamburg based cloud native developer technology blog 
+  This is a Hamburg based cloud native developer technology blog. 
   Sharing best practices and learnings from my journey debugging the cloud native
   development tooling"
 baseurl: "/" # the subpath of your site, e.g. /blog
