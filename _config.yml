@@ -34,7 +34,7 @@ github_username:  aheumaier
 rss: Subscribe
 
 # Build settings
-theme: jekyll-theme-minimal
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
