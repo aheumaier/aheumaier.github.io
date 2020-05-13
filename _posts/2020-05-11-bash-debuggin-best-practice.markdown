@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Bash Debugging Best Practice"
+title:  "Bash Debugging - Part 2"
 date:   2020-05-11 11:32:07 +0200
 categories: bash
 toc: true
