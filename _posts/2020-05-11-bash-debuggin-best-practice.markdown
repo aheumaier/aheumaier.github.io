@@ -2,7 +2,7 @@
 layout: post
 title:  "Bash Debugging - Part 2"
 date:   2020-05-11 11:32:07 +0200
-categories: bash
+categories: tech
 toc: true
 ---
 
