@@ -18,7 +18,7 @@ Once the GPU operation mode is properly set, the next requirement for full graph
 
 It is desirable to prevent the X Window System X11 server and related utilities from looking for attached displays when using Tesla GPUs. The `UseDisplayDevice` configuration option in `xorg.conf` can be set to `none`, thereby preventing any attempts to detect display, validate display modes, etc. The `nvidia-xconfig` utility can be told to set the display device to none by passing it the command line flag `--use-display-device=none` when you run it to update or generate an `xorg.conf` file.
 
-One of the side effects of enabling a windowing system to support full use of OpenGL and other graphics APIs is that it generally also enables a watchdog timer that will terminate CUDA kernels that run for more than a few seconds. This behavior differs from the compute-only scenario where a Tesla GPU is not graphics-enabled, and will allow arbitrarily long-running CUDA kernels. For HPC workloads, it is usually desirable to eliminate such kernel timeouts when the windowing system is running, and this is easily done by setting a special "Interactive" configuration flag to "false", in xorg.conf in the "Device" block for each GPU. The following is an example "Device" section from an HPC-oriented `xorg.conf` file. (see [ NVIDIA README X Config Options section for details][1])
+One of the side effects of enabling a windowing system to support full use of OpenGL and other graphics APIs is that it generally also enables a watchdog timer that will terminate CUDA kernels that run for more than a few seconds. This behavior differs from the compute-only scenario where a Tesla GPU is not graphics-enabled, and will allow arbitrarily long-running CUDA kernels. For HPC workloads, it is usually desirable to eliminate such kernel timeouts when the windowing system is running, and this is easily done by setting a special "Interactive" configuration flag to "false", in xorg.conf in the "Device" block for each GPU. The following is an example "Device" section from an HPC-oriented `xorg.conf` file. (see [ NVIDIA README X Config Options section for details](https://devblogs.nvidia.com/hpc-visualization-nvidia-tesla-gpus)
 
 {% highlight bash %}
 Section "Device"
@@ -53,23 +53,28 @@ This will deploy a Azure NV6 Instance with a Nvidia Tesla M60 for you
 
 
 {% highlight bash %}
-make deploy  
+~$ make deploy  
 {% endhighlight %}
 
-You can connect now to the box with any VNC-Viewer using the hostname as session password
-Open a terminal e.g `konsole` and validate the results: 
+You can connect now to the box with any VNC-Viewer using the hostname as session password.
+Open a terminal e.g `konsole` and validate the results running : 
+
+{% highlight bash %}
+~$ glxinfo | grep render
+~$ glxgears
+{% endhighlight %}
 
 
 ### Setup the node with Packer
 
-Running  `make packer` will build a remote desktop enabled Ubuntu Image in you resource group to use for your own aplicances later:
+Running  `make packer` will build a remote desktop enabled Ubuntu Image in you resource group to use for your own apliaaplicationscances later:
 
 {% highlight bash %}
-~$ make packer  
+~$ make install  
 {% endhighlight %}
 
 ## References
 
-[1]: https://devblogs.nvidia.com/hpc-visualization-nvidia-tesla-gpus/ "HPC Visualization on NVIDIA Tesla GPUs"
+- [HPC Visualization on NVIDIA Tesla GPUs](https://devblogs.nvidia.com/hpc-visualization-nvidia-tesla-gpus/)
 - [Using CUDA and X](https://nvidia.custhelp.com/app/answers/detail/a_id/3029/~/using-cuda-and-x)
 - [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-docker) 

@@ -8,6 +8,6 @@ Minimal Mistakes is a Hamburg based cloud native developer technology blog shari
 development tooling
 
 
-Andreas joined Microsoft in 2017 after spending more than 10 years developing and operating cloud based applications for industry and government clients. In his role as Senior Engineering Lead, he accellerates Microsoft's most strategic tier-1 customers around the globe ​to build epic stuff with focus on production grade co-engineering work. 
+Andreas joined Microsoft in 2017 after spending more than 10 years developing and operating cloud based applications for industry and government clients. In his role as Senior Engineering Lead, he accelerates Microsoft's most strategic tier-1 customers around the globe with focus on production grade co-engineering work. 
 
-Before joining Microsoft, Andreas served years as a CTO, Consultant and a Devops Engineer. Andreas holds an MSc in Bioinformatics from Univ. Hamburg and a Dipl.-Ing. in Chemistry from RWTH Aachen, Germany, with specialization in Chemoinformatics and Drug Discovery.
+Before joining Microsoft, Andreas served in several roles as CTO, Consultant and Devops Engineer. Andreas holds an MSc in Bioinformatics from University Hamburg and a Diploma Engineering degree in Chemistry from RWTH Aachen/Jülich.
